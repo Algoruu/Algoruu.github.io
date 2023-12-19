@@ -7,7 +7,7 @@ hi: "Hallo!"
 avatar_img: "/assets/img/me.png" # path to your avatar
 intro:
   - "Hello"
-  - "I'm just made it to write a development diary."
+  - "Made it to write a development diary."
 skills:
   - name: "Programming"
     icon-class: "fa fa-terminal"
