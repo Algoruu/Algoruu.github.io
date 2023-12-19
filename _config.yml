@@ -21,8 +21,8 @@ permalink: /:categories/:title
 excerpt_separator: "[-----]"
 
 url: https://algoruu.github.io # Required: replace this with your domain
-name: 알고루 # Required: will be displayed on every page's header
-title: 개발개발아 # Required: site's default title
+name: Algoruu's box # Required: will be displayed on every page's header
+title: 개발 일기 # Required: site's default title
 shout: # Required: **TWO** lines, will be displayed on page's header.
   - # one liner two... 주석처리
   - # one liner two... 주석처리
