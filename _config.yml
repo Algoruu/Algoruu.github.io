@@ -20,13 +20,13 @@ layout: post
 permalink: /:categories/:title
 excerpt_separator: "[-----]"
 
-url: # Required: replace this with your domain
-name: textalic # Required: will be displayed on every page's header
-title: site title # Required: site's default title
+url: https://algoruu.github.io # Required: replace this with your domain
+name: 알고루 # Required: will be displayed on every page's header
+title: 개발개발아 # Required: site's default title
 shout: # Required: **TWO** lines, will be displayed on page's header.
-  - one liner one...
-  - one liner two...
-description: "Some short description on your site" # Required
+  - # one liner two... 주석처리
+  - # one liner two... 주석처리
+description: "일단은 개발한다에요" # Required
 
 disqus:
   comments: false # Global toggle on/off disqus comment
