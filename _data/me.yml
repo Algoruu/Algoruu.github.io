@@ -21,7 +21,7 @@ skills:
 
 display_name: "NanYoung Kim"
 contact:
-  - {name: "Mobile", icon-class: "fa fa-phone-square", text: "123 4567 8910", link: "tel: 123 4567 8010"}
+  - #{name: "Mobile", icon-class: "fa fa-phone-square", text: "010 4567 8910", link: "tel: 123 4567 8010"}
   - {name: "Email", icon-class: "fa fa-envelope", text: "mnn1208@naver.com", link: "mailto: mnn1208@naver.com"}
 social:
   - {name: "GitHub", icon-class: "fa fa-github-square", text: "https://github.com/Algoruu", link: "https://github.com/Algoruu"}
