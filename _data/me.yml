@@ -12,12 +12,12 @@ skills:
   - name: "Programming"
     icon-class: "fa fa-terminal"
     list: ["Python", "Java", "C", "SQL"]
-  - name: "Framework"
-    icon-class: "fa fa-th-list"
-    list: ["Laravel / Lumen", "ThinkPHP", "Yii", "Flask"]
-  - name: "Tools"
-    icon-class: "fa fa-cogs"
-    list: ["Linux", "Docker", "Git", "SublimeText"]
+  - #name: "Framework"
+    #icon-class: "fa fa-th-list"
+    #list: ["Laravel / Lumen", "ThinkPHP", "Yii", "Flask"]
+  - #name: "Tools"
+    #icon-class: "fa fa-cogs"
+    #list: ["Linux", "Docker", "Git", "SublimeText"]
 
 display_name: "NanYoung Kim"
 contact:
