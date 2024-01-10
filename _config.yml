@@ -51,9 +51,7 @@ collections: # Define post series here
     output: true
   demo_series_2:
     output: true
-  internet:
-    output: true
-  html:
+  java:
     output: true
 
 defaults:
