@@ -47,13 +47,11 @@ google_analytics:
   id: "" # Required if you use google analytics. Replace with your tracking id here
 
 collections: # Define post series here
-  demo_series:
-    output: false
   java:
     output: true
   programmers:
     output: true
-    
+
 
 defaults:
   - scope:
