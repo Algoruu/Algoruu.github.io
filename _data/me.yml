@@ -21,7 +21,7 @@ skills:
 
 display_name: "NanYoung Kim"
 contact:
-  - {name: "Email", icon-class: "fa fa-envelope", text: "mnn1208@naver.com", link: "mailto: mnn1208@naver.com"}
+  - {name: "Email", icon-class: "fa fa-envelope", text: "mnn1208@naver.com", link: "mailto: lyra.kim.dev@gmail.com"}
   - #{name: "Mobile", icon-class: "fa fa-phone-square", text: "010 4567 8910", link: "tel: 123 4567 8010"}
   
 social:
