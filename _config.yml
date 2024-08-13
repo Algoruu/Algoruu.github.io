@@ -42,6 +42,13 @@ gitalk:
   admin: Algoruu
   distraction_free_mode: true
 
+comments:
+  utterances: https://utteranc.es
+    repo: Algoruu/ Algoruu.github.io
+    issue-term: og:title
+    theme: github-light
+    label: 💖💬💖
+
 google_analytics:
   id: "" # Required if you use google analytics. Replace with your tracking id here
 
