@@ -43,7 +43,7 @@ gitalk:
   distraction_free_mode: true
 
 google_analytics:
-  id: S-W3pLaM_sqqJRurswAPC4WiAYOjZ3qD7TajnP-NBu # Required if you use google analytics. Replace with your tracking id here
+  id: "S-W3pLaM_sqqJRurswAPC4WiAYOjZ3qD7TajnP-NBu" # Required if you use google analytics. Replace with your tracking id here
 
 collections: # Define post series here
   java:
