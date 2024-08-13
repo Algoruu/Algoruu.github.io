@@ -35,11 +35,11 @@ disqus:
 gitalk:
   comments: true # Global toggle on/off gitalk comment
   # replace all of those below with your own
-  client_id: baeea51800be67550b52
-  client_secret: 4a521ccafa96b8b2b128659c35468bdd7ba5d4aa
-  repo: jekyll-theme-textalic
-  owner: unifreak
-  admin: unifreak
+  client_id: Ov23liXou05DSORkDTP
+  client_secret: 1c0fcd66a3e7a6ace10638aaf264ede61570ad80
+  repo: https://algoruu.github.io
+  owner: Algoruu
+  admin: Algoruu
   distraction_free_mode: true
 
 
