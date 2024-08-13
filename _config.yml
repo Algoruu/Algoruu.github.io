@@ -43,9 +43,10 @@ gitalk:
   distraction_free_mode: true
 
 utterances:
+  comments: true
   theme: "github-light" # "github-light" (default), "github-dark"
   issue_term: "pathname" # "pathname" (default)
-  
+
 
 google_analytics:
   id: "" # Required if you use google analytics. Replace with your tracking id here
