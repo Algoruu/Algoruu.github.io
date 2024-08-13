@@ -44,12 +44,15 @@ markdown: true
     </script>
   </div>
 
-<!-- {% if site.disqus.comments %}  
+{% if site.disqus.comments %}  
     {% include disqus.html %}
   {% endif %}
 
-  {% if site.gitalk.comments %}
+{% if site.gitalk.comments %}
     {% include gitalk.html %}
-  {% endif %} -->
+  {% endif %}
 
+{% if site.utterances.comments %}  
+    {% include utterances.html %}
+  {% endif %}
   </div>
