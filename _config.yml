@@ -45,8 +45,8 @@ gitalk:
 comments:
   provider: "utterances"
   utterances:
-  theme: "github-light" # "github-dark"
-  issue_term: "pathname" # pathname은 post의 markdown 파일 이름으로 연결됨
+    theme: "github-light" # "github-dark"
+    issue_term: "pathname" # pathname은 post의 markdown 파일 이름으로 연결됨
 
 google_analytics:
   id: "" # Required if you use google analytics. Replace with your tracking id here
