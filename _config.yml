@@ -26,7 +26,7 @@ title: 개발 일기 # Required: site's default title
 shout: # Required: **TWO** lines, will be displayed on page's header.
   - # one liner two... 주석처리
   - # one liner two... 주석처리
-description: "일단은 개발한다예요" # Required
+description: "일단은 개발한다에요" # Required
 
 disqus:
   comments: false # Global toggle on/off disqus comment
