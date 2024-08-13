@@ -38,7 +38,7 @@ gitalk:
   # replace all of those below with your own
   client_id: Ov23liXou05DSORkDTP
   client_secret: bb8c74f209abb4c3bd8d71b9cd37708c48cc03f8
-  repo: algoruu.github.io
+  repo: Algoruu.github.io
   owner: Algoruu
   admin: Algoruu
   distraction_free_mode: true
