@@ -37,7 +37,7 @@ gitalk:
   comments: true # Global toggle on/off gitalk comment
   # replace all of those below with your own
   client_id: Ov23liXou05DSORkDTP
-  client_secret: 1c0fcd66a3e7a6ace10638aaf264ede61570ad80
+  client_secret: bb8c74f209abb4c3bd8d71b9cd37708c48cc03f8
   repo: https://algoruu.github.io
   owner: Algoruu
   admin: Algoruu
