@@ -33,6 +33,7 @@ disqus:
   shortname:  # Required if you use disqus. Replace with your disqus shortname here
 
 gitalk:
+  enable: true
   comments: true # Global toggle on/off gitalk comment
   # replace all of those below with your own
   client_id: Ov23liXou05DSORkDTP
