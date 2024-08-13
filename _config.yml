@@ -42,6 +42,13 @@ gitalk:
   admin: Algoruu
   distraction_free_mode: true
 
+comments:
+  active: utterances
+  utterances:
+  repo: Algoruu/Algoruu.github.io
+  issue_term: pathname
+  theme: github-light
+
 
 google_analytics:
   id: "" # Required if you use google analytics. Replace with your tracking id here
