@@ -1,4 +1,9 @@
 #l-main {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
     article {
         background: white;
         padding-right: 3rem;
@@ -36,7 +41,6 @@
             font: normal bold 4rem Georgia, serif;
             font-family: 微软雅黑, Helvetica;
             margin-bottom: 0.4rem;
-            /*text-shadow: 2px 3px 0px #C1C1C1;*/
 
             a {
                 color: #333;
@@ -136,6 +140,7 @@
                 padding: 0.5rem;
                 border-radius: 4px;
                 margin: 0rem;
+                
                 &:first-of-type {
                     margin-left: 2rem;
                 }
@@ -177,7 +182,6 @@
     }
 
     div#paginator {
-        max-width: auto;
         margin-top: 2.5rem;
 
         a, span {
@@ -196,7 +200,7 @@
         }
 
         ul li.active {
-            background: #8BB3C1;;
+            background: #8BB3C1;
         }
     }
 }
@@ -258,10 +262,10 @@ ul.tags {
     }
 
     #utterances-comments iframe {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
     
 }
@@ -271,7 +275,6 @@ ul.tags {
     font-size: 1.5rem;
     margin-right: 1rem;
     background-color: #F6F6F6;
-    height: 50%;
     height: 2rem;
     width: 2rem;
     margin-top: 1.5rem;
@@ -283,6 +286,11 @@ ul.tags {
 
 @media (max-width: 992px) {
     #l-main {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
         #about {
             header, section {
                 padding-left: 3rem;
@@ -297,6 +305,7 @@ ul.tags {
                 div span {
                     margin: 0rem;
                     line-height: 4rem;
+                    
                     &:first-of-type {
                         margin-left: 0rem;
                     }
@@ -305,16 +314,21 @@ ul.tags {
         
         }
         #utterances-comments iframe {
-            max-width: 100%;
-            width: 100%;
-            margin: 0 auto;
-            box-sizing: border-box;
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
         }
     }
 }
 
 @media (max-width: 768px) {
     #l-main {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
         article {
             padding-right: 0;
             margin-top: 3rem;
@@ -388,11 +402,12 @@ ul.tags {
                 }
             }
         }
+
         #utterances-comments iframe {
-            max-width: 100%;
-            width: 100%;
-            margin: 0 auto;
-            box-sizing: border-box;
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
         }
     }
 
