@@ -1,12 +1,8 @@
 #l-main {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
 
     .comments {
-        max-width: 100% !important;
-        width: 100% !important;
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
@@ -34,14 +30,14 @@
             width: 5rem;
             height: 5rem;
             margin: 2rem auto 0.5rem auto;
-            font: normal normal bold 2.4rem/4.9rem "Verdana",sans-serif;
+            font: normal normal bold 2.4rem/4.9rem "Verdana", sans-serif;
             box-shadow: 0 0 2px #999;
             border-radius: 50%;
         }
 
         .category {
             font-style: italic;
-            font-family: comic sans ms, cursive;
+            font-family: "Comic Sans MS", cursive;
         }
 
         .title {
@@ -147,7 +143,7 @@
                 padding: 0.5rem;
                 border-radius: 4px;
                 margin: 0rem;
-                
+
                 &:first-of-type {
                     margin-left: 2rem;
                 }
@@ -269,8 +265,6 @@ ul.tags {
     }
 
     #utterances-comments iframe {
-        max-width: 100% !important;
-        width: 100% !important;
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
@@ -292,18 +286,14 @@ ul.tags {
 
 @media (max-width: 992px) {
     #l-main {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
 
         .comments {
-            max-width: 100% !important;
-            width: 100% !important;
             margin: 0 auto !important;
             box-sizing: border-box !important;
         }
-        
+
         #about {
             header, section {
                 padding-left: 3rem;
@@ -318,7 +308,7 @@ ul.tags {
                 div span {
                     margin: 0rem;
                     line-height: 4rem;
-                    
+
                     &:first-of-type {
                         margin-left: 0rem;
                     }
@@ -330,14 +320,10 @@ ul.tags {
 
 @media (max-width: 768px) {
     #l-main {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
 
         .comments {
-            max-width: 100% !important;
-            width: 100% !important;
             margin: 0 auto !important;
             box-sizing: border-box !important;
         }
