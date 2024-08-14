@@ -256,6 +256,14 @@ ul.tags {
         text-decoration: none;
         color: #337ab7;
     }
+
+    #utterances-comments iframe {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
 }
 
 .tag-count, .cate-count {
@@ -294,6 +302,13 @@ ul.tags {
                     }
                 }
             }
+        
+        }
+        #utterances-comments iframe {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
     }
 }
@@ -372,6 +387,12 @@ ul.tags {
                     font-size: 1.7rem;
                 }
             }
+        }
+        #utterances-comments iframe {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
     }
 
