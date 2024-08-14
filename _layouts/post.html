@@ -33,26 +33,24 @@ markdown: true
 
   <div id="markdown-outline" class="col-lg-3">
   </div>
-  <div class="comments">
-    <script src="https://utteranc.es/client.js"
-        repo="Algoruu/Algoruu.github.io"
-        issue-term="pathname"
-        label="💖💬💖"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-    </script>
-  </div>
+</div>
 
+<!-- Utterances 댓글 위젯을 포스트 아래에 위치 -->
+<div class="row">
+  <div class="col-lg-9">
+    <div id="utterances-comments"></div>
+  </div>
+</div>
+
+<!-- 다른 댓글 시스템은 필요시 사용 -->
 {% if site.disqus.comments %}  
     {% include disqus.html %}
-  {% endif %}
+{% endif %}
 
 {% if site.gitalk.comments %}
     {% include gitalk.html %}
-  {% endif %}
+{% endif %}
 
-{% if site.utterances.comments %}  
+{% if site.utterances.comments %}
     {% include utterances.html %}
-  {% endif %}
-  </div>
+{% endif %}
