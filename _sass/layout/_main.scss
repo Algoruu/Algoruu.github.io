@@ -274,6 +274,12 @@ ul.tags {
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
+    .utterances {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
 }
 
 .tag-count, .cate-count {
@@ -298,6 +304,13 @@ ul.tags {
         box-sizing: border-box;
 
         .comments {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+        }
+
+        .utterances {
             max-width: 100% !important;
             width: 100% !important;
             margin: 0 auto !important;
@@ -336,6 +349,13 @@ ul.tags {
         box-sizing: border-box;
 
         .comments {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+        }
+
+        .utterances {
             max-width: 100% !important;
             width: 100% !important;
             margin: 0 auto !important;
