@@ -1,5 +1,6 @@
 # These data will be shown in /about page and every page footer
 # Replace these with your own personal info
+# Ctrl + /을 하면 주석을 붙였다 지웠다 할 수 있음
 
 name: "NanYoung Kim"
 job: "Student"
@@ -12,9 +13,9 @@ skills:
   - name: "Programming"
     icon-class: "fa fa-terminal"
     list: ["Python", "Java", "C", "SQL", "HTML5", "Flutter"]
-  - name: "Framework"
-    icon-class: "fa fa-th-list"
-    list: ["Node.js"]
+  # - name: "Framework"
+    # icon-class: "fa fa-th-list"
+    # list: ["Node.js"]
   - name: "Tools"
     icon-class: "fa fa-cogs"
     list: ["Visual Studio Code", "GitHub", "Eclipse IDE", "Docker"]
