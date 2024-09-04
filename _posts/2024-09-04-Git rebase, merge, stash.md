@@ -5,7 +5,7 @@ excerpt: "Git rebase, merge, stash"
 category: git
 tags: [git]
 date: '2024-09-04 19:30:00 +09:00'
-last_modified_at: '2024-09-34'
+last_modified_at: '2024-09-04'
 ---
 
 # Git rebase, merge, stash 설명
