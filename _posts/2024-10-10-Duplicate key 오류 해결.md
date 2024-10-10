@@ -21,7 +21,7 @@ fk_기준 테이블명_참조테이블명_참조키<br>
 **cartItems.user_id > users.id** : fk_cartItems_users_id<br>
 **likes_user_id > users.id** : fk_likes_users_id<br>
 
-![alt text](../_programmers/img01/image-359.png)<br>
+<img src="https://github.com/Algoruu/Algoruu.github.io/blob/main/_programmers/img01/image-359.png?raw=true">
 - 하지만 또 오류가 발생함!<br>
 ERROR 1061: Duplicate key name 'book_id_idx'<br><br/>
 
@@ -33,7 +33,7 @@ sql에서 관리하기 쉽게 인덱스를 추가해주는데, 인덱스 이름�
 
 **index** : 데이터베이스 내에서 일종의 목차를 생성한다고 생각하면 됨.<br>
 
-![alt text](../_programmers/img01/image-360.png)<br>
+<img src="https://github.com/Algoruu/Algoruu.github.io/blob/main/_programmers/img01/image-360.png?raw=true">
 - 이렇게 index 이름도 수정하면 잘 작동함!!<br><br>
 
 따라서 Duplicate key 오류는 이름을 겹치지 않게, 일정한 규칙을 따라서 지을 것이 핵심임!<br> 
