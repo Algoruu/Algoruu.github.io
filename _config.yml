@@ -50,6 +50,8 @@ collections: # Define post series here
     output: true
   programmers:
     output: true
+  woowacourse:
+    output: true
 
 
 defaults:
