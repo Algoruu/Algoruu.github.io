@@ -54,6 +54,7 @@ jobs:
           path: _site/
           if-no-files-found: error
           retention-days: 1
+          compression-level: 9  # 파일 크기 최소화
 
   # Deployment job
   deploy:
