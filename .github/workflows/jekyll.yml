@@ -41,23 +41,26 @@ jobs:
 
       - name: Remove unnecessary files
         run: |
-          find _site/ -type l -delete  # 심볼릭 링크 삭제
+          find _site/ -type l -delete  # 모든 심볼릭 링크 삭제
           find _site/ -type f -links +1 -exec rm -f {} \;  # 하드 링크 삭제
           rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules _site/*.log
-          find _site/ -name ".DS_Store" -type f -delete  # macOS 관련 불필요 파일 삭제
+          find _site/ -name ".DS_Store" -type f -delete  # macOS 관련 파일 삭제
           find _site/ -name "*.log" -type f -delete  # 로그 파일 삭제
           find _site/ -name "*.bak" -type f -delete  # 백업 파일 삭제
+          find _site/ -type d -empty -delete  # 빈 폴더 삭제
           chmod -R 755 _site/  # 파일 권한 조정
 
       - name: Verify generated files
-        run: ls -lah _site/
+        run: |
+          chmod -R 755 _site/
+          ls -lah _site/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: _site/
-          compression-level: 9  # 최대 압축 적용
+          compression-level: 0  # 압축 비활성화
           if-no-files-found: error
           retention-days: 1
 
@@ -75,7 +78,10 @@ jobs:
           path: _site/
 
       - name: Verify extracted files
-        run: ls -lah _site/
+        run: |
+          find _site/ -name "*.zip" -type f -delete
+          find _site/ -name "*.tar.gz" -type f -delete
+          ls -lah _site/
 
       - name: Deploy to GitHub Pages
         id: deployment
