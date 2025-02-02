@@ -15,7 +15,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +26,6 @@ jobs:
         with:
           ruby-version: '3.1'
           bundler-cache: true
-          cache-version: 0
 
       - name: Setup Pages
         id: pages
@@ -44,16 +42,16 @@ jobs:
       - name: Verify generated files
         run: ls -lah _site/
 
-      - name: Upload artifact (Using `actions/upload-artifact@v4`)
+      - name: Archive artifact
+        run: tar -czvf github-pages.tar.gz -C _site .
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: _site/
-          if-no-files-found: error
+          path: github-pages.tar.gz
           retention-days: 1
-          compression-level: 9  # 파일 크기 최소화
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
@@ -67,11 +65,11 @@ jobs:
           name: github-pages
           path: _site/
 
-      - name: Check uploaded files
-        run: ls -lah _site/
+      - name: Extract artifact
+        run: tar -xzvf _site/github-pages.tar.gz -C _site/
 
-      - name: Fix permissions after download
-        run: chmod -R 755 _site/
+      - name: Verify extracted files
+        run: ls -lah _site/
 
       - name: Deploy to GitHub Pages
         id: deployment
