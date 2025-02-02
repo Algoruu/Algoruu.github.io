@@ -44,10 +44,7 @@ jobs:
       - name: Verify generated files
         run: ls -lah _site/
 
-      - name: Fix permissions
-        run: chmod -R 755 _site/
-
-      - name: Upload artifact
+      - name: Upload artifact (Using `actions/upload-artifact@v4`)
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
