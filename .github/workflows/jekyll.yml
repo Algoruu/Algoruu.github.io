@@ -73,9 +73,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
+          path: _site/
 
       - name: Verify extracted files
-        run: ls -lah github-pages/
+        run: ls -lah _site/
 
       - name: Deploy to GitHub Pages
         id: deployment
