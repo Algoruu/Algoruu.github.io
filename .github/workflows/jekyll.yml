@@ -39,21 +39,23 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Remove unnecessary files
+      - name: Check for hard links
+        run: find _site/ -type f -links +1 -exec ls -lh {} \;
+
+      - name: Remove unwanted files
         run: |
-          find _site/ -type l -delete  # 모든 심볼릭 링크 삭제
+          find _site/ -type l -delete  # 심볼릭 링크 삭제
           find _site/ -type f -links +1 -exec rm -f {} \;  # 하드 링크 삭제
-          rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules _site/*.log
-          find _site/ -name ".DS_Store" -type f -delete  # macOS 관련 파일 삭제
-          find _site/ -name "*.log" -type f -delete  # 로그 파일 삭제
-          find _site/ -name "*.bak" -type f -delete  # 백업 파일 삭제
+          find _site/ -name "*.zip" -type f -delete
+          find _site/ -name "*.tar.gz" -type f -delete
+          find _site/ -name "*.log" -type f -delete
+          find _site/ -name "*.bak" -type f -delete
+          find _site/ -name "*.tmp" -type f -delete
           find _site/ -type d -empty -delete  # 빈 폴더 삭제
           chmod -R 755 _site/  # 파일 권한 조정
 
       - name: Verify generated files
-        run: |
-          chmod -R 755 _site/
-          ls -lah _site/
+        run: ls -lah _site/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -79,8 +81,8 @@ jobs:
 
       - name: Verify extracted files
         run: |
-          find _site/ -name "*.zip" -type f -delete
-          find _site/ -name "*.tar.gz" -type f -delete
+          echo "Checking for unexpected files..."
+          find _site/ -type f \( -name "*.zip" -o -name "*.tar.gz" -o -name "*.log" -o -name "*.bak" \) -exec echo "Unexpected file: {}" \;
           ls -lah _site/
 
       - name: Deploy to GitHub Pages
