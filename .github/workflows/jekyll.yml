@@ -49,6 +49,8 @@ jobs:
         run: |
           rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules
           find _site/ -name "*.log" -type f -delete
+          find _site/ -name "*.zip" -type f -delete
+          find _site/ -name "*.tar.gz" -type f -delete
 
       - name: Verify generated files
         run: ls -lah _site/
@@ -79,3 +81,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_path: _site/
