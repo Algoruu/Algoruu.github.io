@@ -6,8 +6,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
+  id-token: write  # 🔥 추가됨
 
 concurrency:
   group: "pages"
@@ -52,6 +53,10 @@ jobs:
           retention-days: 1
 
   deploy:
+    permissions:  # 🔥 추가됨
+      id-token: write
+      pages: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
