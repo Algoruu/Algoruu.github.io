@@ -43,14 +43,14 @@ jobs:
         run: du -sh _site/
 
       - name: Remove symlinks and hard links
-        run: find _site/ -type l -delete
+        run: |
+          find _site/ -type l -delete
+          find _site/ -type f -links +1 -exec rm -f {} \;
 
       - name: Remove unnecessary files
         run: |
           rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules
           find _site/ -name "*.log" -type f -delete
-          find _site/ -name "*.zip" -type f -delete
-          find _site/ -name "*.tar.gz" -type f -delete
 
       - name: Verify generated files
         run: ls -lah _site/
@@ -73,13 +73,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: _site/
 
       - name: Verify extracted files
-        run: ls -lah _site/
+        run: ls -lah github-pages/
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_path: _site/
+          artifact_name: github-pages
