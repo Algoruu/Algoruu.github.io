@@ -52,6 +52,8 @@ collections: # Define post series here
     output: true
   woowacourse:
     output: true
+  docs:
+    output: true
 
 
 defaults:
