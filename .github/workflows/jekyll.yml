@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write  # 이 부분 추가
+  id-token: write
 
 concurrency:
   group: "pages"
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: _site  # 여기 이름 수정
+          name: github-pages  # ✅ 동일한 이름 사용
           path: _site/
           retention-days: 1
 
@@ -59,11 +59,8 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: _site  # 여기 이름 수정
+          name: github-pages  # ✅ 업로드한 이름과 동일하게 설정
           path: _site/
-
-      - name: Extract artifact
-        run: tar -xzvf _site/github-pages.tar.gz -C _site/ || echo "No extraction needed"
 
       - name: Verify extracted files
         run: ls -lah _site/
