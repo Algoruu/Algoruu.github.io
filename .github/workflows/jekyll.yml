@@ -39,18 +39,15 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Check _site directory size
-        run: du -sh _site/
-
-      - name: Remove symlinks and hard links
-        run: |
-          find _site/ -type l -delete
-          find _site/ -type f -links +1 -exec rm -f {} \;
-
       - name: Remove unnecessary files
         run: |
-          rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules
-          find _site/ -name "*.log" -type f -delete
+          find _site/ -type l -delete  # 심볼릭 링크 삭제
+          find _site/ -type f -links +1 -exec rm -f {} \;  # 하드 링크 삭제
+          rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules _site/*.log
+          find _site/ -name ".DS_Store" -type f -delete  # macOS 관련 불필요 파일 삭제
+          find _site/ -name "*.log" -type f -delete  # 로그 파일 삭제
+          find _site/ -name "*.bak" -type f -delete  # 백업 파일 삭제
+          chmod -R 755 _site/  # 파일 권한 조정
 
       - name: Verify generated files
         run: ls -lah _site/
