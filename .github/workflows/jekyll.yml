@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write  # 🔥 추가됨
+  id-token: write  # 이 부분 추가
 
 concurrency:
   group: "pages"
@@ -42,21 +42,14 @@ jobs:
       - name: Verify generated files
         run: ls -lah _site/
 
-      - name: Archive artifact
-        run: tar -czvf github-pages.tar.gz -C _site .
-
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages
-          path: github-pages.tar.gz
+          name: _site  # 여기 이름 수정
+          path: _site/
           retention-days: 1
 
   deploy:
-    permissions:  # 🔥 추가됨
-      id-token: write
-      pages: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -66,14 +59,11 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: github-pages
+          name: _site  # 여기 이름 수정
           path: _site/
 
       - name: Extract artifact
-        run: tar -xzvf _site/github-pages.tar.gz -C _site/
-
-      - name: Remove artifact file after extraction
-        run: rm -f _site/github-pages.tar.gz
+        run: tar -xzvf _site/github-pages.tar.gz -C _site/ || echo "No extraction needed"
 
       - name: Verify extracted files
         run: ls -lah _site/
@@ -81,5 +71,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: _site
