@@ -1,6 +1,11 @@
 ---
-layout: default
-title: API 문서
+layout: post
+title:  "DevPals api docs"
+excerpt: "DevPals api docs"
+category: swagger
+tags: [swagger]
+date: '2025-02-02 15:00:00 +09:00'
+last_modified_at: '2025-02-02'
 ---
 
 <!DOCTYPE html>
