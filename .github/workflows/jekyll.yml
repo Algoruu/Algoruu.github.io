@@ -27,15 +27,8 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-
-      - name: Cleanup before building
-        run: rm -rf _site/.git _site/.jekyll-cache _site/vendor _site/node_modules
-
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
@@ -51,15 +44,12 @@ jobs:
           find _site/ -type d -empty -delete  # 빈 폴더 삭제
           chmod -R 755 _site/  # 파일 권한 조정
 
-      - name: Verify generated files
-        run: ls -lah _site/
-
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: _site/
-          compression-level: 0  # 압축 비활성화
+          compression-level: 0
           if-no-files-found: error
           retention-days: 1
 
@@ -68,21 +58,18 @@ jobs:
     needs: build
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: github-pages
           path: _site/
 
-      - name: Verify extracted files
-        run: |
-          echo "Checking for unexpected files..."
-          find _site/ -type f \( -name "*.zip" -o -name "*.tar.gz" -o -name "*.log" -o -name "*.bak" \) -exec echo "Unexpected file: {}" \;
-          ls -lah _site/
-
-      - name: Fix file permissions
-        run: chmod -R 755 _site/
-
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
