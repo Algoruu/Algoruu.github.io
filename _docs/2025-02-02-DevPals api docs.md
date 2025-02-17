@@ -1,1 +1,5 @@
+---
+layout: default
+---
+
 <a href="{{ site.baseurl }}/assets/html/devPals-Swagger.html">**DevPals Swagger 문서 확인하기**</a>
